@@ -51,8 +51,8 @@ function Users(props) {
 
   const onChangeUserType = (userType) => {
     setUsers(null);
-    if (userType === "new") {
-      setUserType("new");
+    if (userType === "noFollow") {
+      setUserType("noFollow");
     } else {
       setUserType("follow");
     }
@@ -97,8 +97,8 @@ function Users(props) {
           Following
         </Button>
         <Button
-          className={userType === "new" && "active"}
-          onClick={() => onChangeUserType("new")}
+          className={userType === "noFollow" && "active"}
+          onClick={() => onChangeUserType("noFollow")}
         >
           Not following
         </Button>

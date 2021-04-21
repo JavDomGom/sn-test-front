@@ -47,7 +47,7 @@ export function followUserApi(idUser) {
 }
 
 export function unfollowUserApi(idUser) {
-  const url = `${API_HOST}/deleteFollow?id=${idUser}`;
+  const url = `${API_HOST}/removeFollow?id=${idUser}`;
 
   const params = {
     method: "DELETE",

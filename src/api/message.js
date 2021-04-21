@@ -70,3 +70,23 @@ export function getFollowersMessagesApi(page = 1) {
       return err;
     });
 }
+
+export function getMessageApi(idMessage) {
+  const url = `${API_HOST}/getMsg?id=${idMessage}`;
+
+  const params = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getTokenApi()}`,
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      return err;
+    });
+}

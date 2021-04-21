@@ -25,10 +25,10 @@ function User(props) {
     getUserApi(params.id)
       .then((response) => {
         setUser(response);
-        if (!response) toast.error("User does not exist.");
+        if (!response) toast.error("User doesn't exist.");
       })
       .catch(() => {
-        toast.error("User does not exist.");
+        toast.error("User doesn't exist.");
       });
   }, [params]);
 
