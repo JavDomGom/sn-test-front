@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { map } from "lodash";
 import moment from "moment";
 import AvatarNotFound from "../../assets/png/avatar-no-found.png";
 import { API_HOST } from "../../utils/constants";
@@ -35,13 +33,11 @@ export default function GetMessage(props) {
             {userInfo?.name} {userInfo?.lastName}
             <span>{moment(message.datetime).calendar()}</span>
           </div>
-          <Link to={`/msg/${message?._id}`}>
           <div
             dangerouslySetInnerHTML={{
               __html: replaceURLWithHTMLLinks(message.message),
             }}
           />
-          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Button, Spinner } from "react-bootstrap";
 import BasicLayout from "../../layout/BasicLayout";
 import GetMessage from "../../components/Message";
 import { getMessageApi } from "../../api/message";
@@ -8,6 +7,7 @@ import "./Message.scss";
 
 export default function Message(props) {
   const { setRefreshCheckLogIn } = props;
+  console.log(props)
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
